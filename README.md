@@ -15,7 +15,7 @@ directory.
 
 # Installation
 
-    $ pip3 install markdown-inline-graphviz --user
+    $ pip3 install markdown_inline_graphviz_extension --user
 
 # Usage
 
