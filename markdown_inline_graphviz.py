@@ -15,9 +15,10 @@ filename specified in the tag. Example:
     }
 %}
 
-Requires the graphviz library (http://www.graphviz.org/)
+Requires the graphviz library (http://www.graphviz.org/) and python 3
 
 Inspired by jawher/markdown-dot (https://github.com/jawher/markdown-dot)
+Forked from sprin/markdown-inline-graphviz (https://github.com/sprin/markdown-inline-graphviz
 """
 
 import re

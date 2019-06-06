@@ -21,10 +21,10 @@ if sys.argv[-1] == 'publish':
 setup(
     name="Markdown Inline Graphviz Extension",
     version=VERSION,
-    py_modules=["mdx_inline_graphviz"],
+    py_modules=["markdown_inline_graphviz"],
     install_requires=['Markdown>=2.3.1'],
-    author="Steffen Prince",
-    author_email="steffen@sprin.io",
+    author="Cesar  Morel",
+    author_email="cesaremoreln@gmail.com",
     description="Render inline graphs with Markdown and Graphviz",
     license="MIT",
     url="https://github.com/sprin/markdown-inline-graphviz",
@@ -39,8 +39,6 @@ setup(
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
