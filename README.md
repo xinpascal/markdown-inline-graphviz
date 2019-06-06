@@ -2,13 +2,13 @@ Markdown Inline Graphviz (for Python 3)
 =======================================
 
 This is just a continuation of the great job of Steffen Prince in [sprin/markdown-inline-graphviz](https://github.com/sprin/markdown-inline-graphviz), 
-in order to get it work with pip3.
+in order to get it work with pip3. If you use python 2, please use the original extension instead.
 
 A Python Markdown extension that replaces inline Graphviz definitins with
 inline SVGs or PNGs!
 
 Why render the graphs inline? No configuration! Works with any
-Python-Markdown-based static site generator, such as
+Python-Markdown-based static site generator, suche originas
 [MkDocs](http://www.mkdocs.org/), [Pelican](http://blog.getpelican.com/), and
 [Nikola](https://getnikola.com/) out of the box without configuring an output
 directory.
