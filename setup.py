@@ -2,7 +2,7 @@ import os
 import sys
 from setuptools import setup
 
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 if sys.argv[-1] == 'publish':
     if os.system("pip freeze | grep wheel"):
@@ -19,15 +19,15 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 setup(
-    name="markdown-inline-graphviz-extension",
+    name="markdown_inline_graphviz_extension",
     version=VERSION,
     py_modules=["markdown_inline_graphviz"],
     install_requires=['Markdown>=2.3.1'],
-    author="Cesar  Morel",
+    author="Cesar Morel",
     author_email="cesaremoreln@gmail.com",
-    description="Render inline graphs with Markdown and Graphviz",
+    description="Render inline graphs with Markdown and Graphviz (python3 version)",
     license="MIT",
-    url="https://github.com/sprin/markdown-inline-graphviz",
+    url="https://github.com/cesaremorel/markdown-inline-graphviz",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
 
