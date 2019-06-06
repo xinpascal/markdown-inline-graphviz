@@ -2,7 +2,7 @@ import os
 import sys
 from setuptools import setup
 
-VERSION = '1.0'
+VERSION = '1.0.1'
 
 if sys.argv[-1] == 'publish':
     if os.system("pip freeze | grep wheel"):
@@ -19,7 +19,7 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 setup(
-    name="Markdown Inline Graphviz Extension",
+    name="markdown-inline-graphviz-extension",
     version=VERSION,
     py_modules=["markdown_inline_graphviz"],
     install_requires=['Markdown>=2.3.1'],
