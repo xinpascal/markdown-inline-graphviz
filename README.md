@@ -1,5 +1,8 @@
-Markdown Inline Graphviz
-========================
+Markdown Inline Graphviz (for Python 3)
+=======================================
+
+This is just a continuation of the great job of Steffen Prince in [sprin/markdown-inline-graphviz](https://github.com/sprin/markdown-inline-graphviz), 
+in order to get it work with pip3.
 
 A Python Markdown extension that replaces inline Graphviz definitins with
 inline SVGs or PNGs!
@@ -12,16 +15,16 @@ directory.
 
 # Installation
 
-    $ pip install markdown-inline-graphviz
+    $ pip3 install markdown-inline-graphviz --user
 
 # Usage
 
-Activate the `inline_graphviz` extension. For example, with Mkdocs, you add a
+Activate the `markdown_inline_graphviz` extension. For example, with Mkdocs, you add a
 stanza to mkdocs.yml:
 
 ```
 markdown_extensions:
-    - inline_graphviz
+    - markdown_inline_graphviz
 ```
 
 To use it in your Markdown doc:
@@ -43,6 +46,8 @@ Supported graphviz commands: dot, neato, fdp, sfdp, twopi, circo.
 
 Inspired by [jawher/markdown-dot](https://github.com/jawher/markdown-dot),
 which renders the dot graph to a file instead of inline.
+
+Forked from [sprin/markdown-inline-graphviz](https://github.com/sprin/markdown-inline-graphviz)
 
 
 # License
