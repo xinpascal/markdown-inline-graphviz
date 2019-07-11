@@ -2,7 +2,7 @@ import os
 import sys
 from setuptools import setup
 
-VERSION = '1.0.3'
+VERSION = '1.1'
 
 if sys.argv[-1] == 'publish':
     if os.system("pip freeze | grep wheel"):
@@ -40,5 +40,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )
