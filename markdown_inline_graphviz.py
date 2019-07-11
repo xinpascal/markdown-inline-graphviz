@@ -27,9 +27,14 @@ import subprocess
 import base64
 
 # Global vars
-BLOCK_RE = re.compile(
-    r'```graphviz[ ]* (?P<command>\w+)\s+(?P<filename>[^\s]+)\s*\n(?P<content>.*?)```\s*$',
+BLOCK_RE_CURLY_BRACKET = re.compile(
+        r'^{%[ ]* (?P<command>\w+)\s+(?P<filename>[^\s]+)\s*\n(?P<content>.*?)%}\s*$',
     re.MULTILINE | re.DOTALL)
+
+BLOCK_RE_GRAVE_ACCENT = re.compile(
+        r'^```graphviz[ ]* (?P<command>\w+)\s+(?P<filename>[^\s]+)\s*\n(?P<content>.*?)```\s*$',
+    re.MULTILINE | re.DOTALL)
+
 # Command whitelist
 SUPPORTED_COMMAMDS = ['dot', 'neato', 'fdp', 'sfdp', 'twopi', 'circo']
 
@@ -55,7 +60,7 @@ class InlineGraphvizPreprocessor(markdown.preprocessors.Preprocessor):
 
         text = "\n".join(lines)
         while 1:
-            m = BLOCK_RE.search(text)
+            m = BLOCK_RE_CURLY_BRACKET.search(text) if BLOCK_RE_CURLY_BRACKET.search(text) else BLOCK_RE_GRAVE_ACCENT.search(text)
             if m:
                 command = m.group('command')
                 # Whitelist command, prevent command injection.
