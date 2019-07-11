@@ -22,12 +22,25 @@ directory.
 Activate the `markdown_inline_graphviz` extension. For example, with Mkdocs, you add a
 stanza to mkdocs.yml:
 
-```
+```yaml
 markdown_extensions:
     - markdown_inline_graphviz
 ```
 
 To use it in your Markdown doc:
+
+```
+    ```graphviz attack_plan.svg
+    digraph G {
+        rankdir=LR
+        Earth [peripheries=2]
+        Mars
+        Earth -> Mars
+    }
+    ```
+```
+
+Alternatively you can still using `{%` legacy notation but its not recommended.
 
 ```
 {% dot attack_plan.svg
