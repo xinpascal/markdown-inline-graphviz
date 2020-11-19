@@ -83,13 +83,18 @@ class InlineGraphvizPreprocessor(markdown.preprocessors.Preprocessor):
 
                     if filetype == 'svg':
                         data_url_filetype = 'svg+xml'
-                        encoding = 'utf-8'
-                        img = output.decode(encoding)
+                        encoding = 'base64'
+                        output = base64.b64encode(output).decode('utf-8')
+                        data_path = "data:image/%s;%s,%s" % (
+                            data_url_filetype,
+                            encoding,
+                            output)
+                        img = "![" + filename + "](" + data_path + ")"
 
                     if filetype == 'png':
                         data_url_filetype = 'png'
                         encoding = 'base64'
-                        output = base64.b64encode(output)
+                        output = base64.b64encode(output).decode('utf-8')
                         data_path = "data:image/%s;%s,%s" % (
                             data_url_filetype,
                             encoding,
